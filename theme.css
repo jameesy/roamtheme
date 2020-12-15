@@ -1,129 +1,182 @@
 :root {
-  --header-font:"Lato", sans-serif;
-  --body-font:"Open Sans", sans-serif;
-  --code-font:"IBM Plex", monospace;
+    --header-font: "Lato", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+    --code-font: "IBM Plex", monospace;
 }
 
 /* Body layout */
 .roam-block-container {
-  max-width: 1000px;
+    max-width: 1000px;
 }
-
 .roam-article {
-  padding-right: 10px !important;
-  max-width: 740px;
-  padding-left: 20px !important;
+    padding-right: 10px !important;
+    max-width: 740px;
+    padding-left: 20px !important;
 }
 .roam-article > div {
-  padding: 30px 50px 50px 50px;
-  background: var(--page-color);
-  box-shadow: var(--page-shadow);
-  border-radius: 6px;
-  margin-top: 10px !important;
-  width: auto;
+    padding: 30px 50px 50px 50px;
+    background: var(--page-color);
+    box-shadow: var(--page-shadow);
+    border-radius: 6px;
+    margin-top: 10px !important;
+    width: auto;
 }
 .roam-body-main {
-  top: 0 !important;
-  height: 100% !important;
-  width: auto !important;
-  position: relative !important;
-  padding-left: 50px;
-  min-width: 600px;
+    top: 0 !important;
+    height: 100% !important;
+    width: auto !important;
+    position: relative !important;
+    padding-left: 50px;
+    min-width: 600px;
 }
 .roam-main {
-  width: unset !important;
-  max-width: 100% !important;
-  height: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  margin: auto;
-  transition: padding-left 0.15s ease-out;
+    width: unset !important;
+    max-width: 100% !important;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: auto;
+    transition: padding-left 0.15s ease-out;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    padding: 6px;
+}
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+    font-size: 14px;
+    opacity: 80%;
+    letter-spacing: 0.04em;
+}
+div.roam-sidebar-container.noselect > div > div {
+    font-size: 14px;
+    letter-spacing: 0.03em;
 }
 
-
+.roam-body .roam-app .roam-sidebar-container {
+    background-color: white;
+    border-right: 1px #eee solid;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page,
+.roam-body .roam-app .roam-sidebar-container > * {
+    opacity: 80%;
+    box-shadow: none;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+    background: white;
+    color: black;
+}
+span.bp3-icon-small.bp3-icon-star {
+    display: none;
+    visibility: hidden;
+}
 
 /* Typography */
-h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
-  font-family: var(--header-font);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.rm-level1,
+.rm-level2,
+.rm-level3 .rm-title-editing-display {
+    font-family: var(--header-font);
 }
 .rm-title-editing-display textarea {
-  font-family: var(--header-font);
-  font-size: 1em;
+    font-family: var(--header-font);
+    font-size: 1em;
 }
-div, textarea {
-  font-family: var(--body-font);
-  font-size: var(--font-size);
-  color: var(--text-color);
+div,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--font-size);
+    color: var(--text-color);
 }
 
-
+/* Code Syntax */
+code {
+    font-family: var(--code-font);
+    background: #F0F4F8;
+    color: var(--text-color);
+    border: none;
+    padding: 4px 6px;
+    opacity: 90%;
+}
 
 /* Custom Tags */
-span.rm-page-ref[data-tag="Tweet"], span[data-link-title^="Tweet"] .rm-page-ref {
-  background: #00acee !important;
-  color: white !important;
-  padding: 1px 5px;
-  border-radius: 4px;
-  line-height: 1em;
-  font-weight: 500;
+span.rm-page-ref[data-tag="Tweet"],
+span[data-link-title^="Tweet"] .rm-page-ref {
+    background: #00acee !important;
+    color: white !important;
+    padding: 1px 5px;
+    border-radius: 4px;
+    line-height: 1em;
+    font-weight: 500;
 }
-span.rm-page-ref[data-tag="Literature Notes"], span[data-link-title^="Literature Notes"] .rm-page-ref {
-  background: #fff !important;
-  color: black;
-  border: 1px solid;
-  border-radius: 4px;
-  padding: 1px 5px;
-  font-weight: 600;
-  line-height: 1.4em;
+span.rm-page-ref[data-tag="Literature Notes"],
+span[data-link-title^="Literature Notes"] .rm-page-ref {
+    background: #fff !important;
+    color: black;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="Permanent Notes"], span[data-link-title^="Permanent Notes"] .rm-page-ref {
-  background: #464748 !important;
-  color: white !important;
-  border-radius: 4px;
-  padding: 1px 7px;
-  font-weight: 600;
-  line-height: 1.4em;
+span.rm-page-ref[data-tag="Permanent Notes"],
+span[data-link-title^="Permanent Notes"] .rm-page-ref {
+    background: #464748 !important;
+    color: white !important;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="Relevant Notes"], span[data-link-title^="Relevant Notes"] .rm-page-ref {
-  background: #464748 !important;
-  color: white !important;
-  border-radius: 4px;
-  padding: 1px 7px;
-  font-weight: 600;
-  line-height: 1.4em;
+span.rm-page-ref[data-tag="Relevant Notes"],
+span[data-link-title^="Relevant Notes"] .rm-page-ref {
+    background: #464748 !important;
+    color: white !important;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="Reference Notes"], span[data-link-title^="Permanent Notes"] .rm-page-ref {
-  background: #fff !important;
-  color: black;
-  border: 1px solid;
-  border-radius: 4px;
-  padding: 1px 5px;
-  font-weight: 600;
-  line-height: 1.4em;
+span.rm-page-ref[data-tag="Reference Notes"],
+span[data-link-title^="Permanent Notes"] .rm-page-ref {
+    background: #fff !important;
+    color: black;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="Fleeting Notes"], span[data-link-title^="Permanent Notes"] .rm-page-ref {
-  background: #fff !important;
-  color: black;
-  border: 1px solid;
-  border-radius: 4px;
-  padding: 1px 5px;
-  font-weight: 600;
-  line-height: 1.4em;
+span.rm-page-ref[data-tag="Fleeting Notes"],
+span[data-link-title^="Permanent Notes"] .rm-page-ref {
+    background: #fff !important;
+    color: black;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="Thought Bank"], span[data-link-title^="Thought Bank"] .rm-page-ref {
-  color: #fcb815 !important;
-  padding: 3px 4px;
-  font-weight: 700;
-  line-height: 1.4em;
+span.rm-page-ref[data-tag="Thought Bank"],
+span[data-link-title^="Thought Bank"] .rm-page-ref {
+    color: #fcb815 !important;
+    padding: 3px 4px;
+    font-weight: 700;
+    line-height: 1.4em;
 }
 span.rm-page-ref[data-tag="Thought Bank"]:before {
-  content:"✦ ";
+    content: "✦ ";
 }
-span.rm-page-ref[data-tag="Daily Journal"], span[data-link-title^="Daily Journal"] .rm-page-ref {
-  background: #3287dd !important;
-  color: white !important;
-  border-radius: 4px;
-  padding: 1px 7px;
-  font-weight: 600;
-  line-height: 2em;
+span.rm-page-ref[data-tag="Daily Journal"],
+span[data-link-title^="Daily Journal"] .rm-page-ref {
+    background: #3287dd !important;
+    color: white !important;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-weight: 600;
+    line-height: 2em;
 }
