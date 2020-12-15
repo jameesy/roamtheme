@@ -110,13 +110,13 @@ span.rm-page-ref[data-tag="Fleeting Notes"], span[data-link-title^="Permanent No
   font-weight: 600;
   line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="IdeaBank"], span[data-link-title^="IdeaBank"] .rm-page-ref {
+span.rm-page-ref[data-tag="Thought Bank"], span[data-link-title^="Thought Bank"] .rm-page-ref {
   color: #fcb815 !important;
   padding: 3px 4px;
   font-weight: 700;
   line-height: 1.4em;
 }
-span.rm-page-ref[data-tag="IdeaBank"]:before {
+span.rm-page-ref[data-tag="Thought Bank"]:before {
   content:"✦ ";
 }
 span.rm-page-ref[data-tag="Daily Journal"], span[data-link-title^="Daily Journal"] .rm-page-ref {
