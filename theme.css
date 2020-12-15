@@ -8,6 +8,7 @@
 .roam-block-container {
   max-width: 1000px;
 }
+
 .roam-article {
   padding-right: 10px !important;
   max-width: 740px;
@@ -59,10 +60,11 @@ div, textarea {
 
 /* Custom Tags */
 span.rm-page-ref[data-tag="Tweet"], span[data-link-title^="Tweet"] .rm-page-ref {
-  background: #81d5ed !important;
+  background: #00acee !important;
   color: white !important;
-  padding: 3px 7px;
-  line-height: 1.4em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  line-height: 1em;
   font-weight: 500;
 }
 span.rm-page-ref[data-tag="Literature Notes"], span[data-link-title^="Literature Notes"] .rm-page-ref {
